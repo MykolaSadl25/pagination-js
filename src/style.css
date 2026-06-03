@@ -1,0 +1,64 @@
+body{
+    font-family: Montserrat;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    outline: 1px solid red;
+}
+
+.list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.button{
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: lightblue;
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.image{
+    width: 360px;
+    height: 300px;
+    display: block;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.disabled-btn{
+    background-color: rgba(173, 216, 230, 0.547);
+}
+
+.searchInput{
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid rgb(170, 170, 170);
+    background-color: white;
+    margin-bottom: 30px;
+}
+
+.item{
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 10px;
+}
+.stats{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
