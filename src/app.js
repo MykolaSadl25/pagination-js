@@ -71,3 +71,72 @@ inputRef.addEventListener("input",debounce((e)=>{
 },500))
 
 btnLoadRef.style.display="none"
+
+// import debounce from "lodash.debounce";
+// import * as basicLightbox from 'basiclightbox';
+// import 'basiclightbox/dist/basicLightbox.min.css';
+
+// const URL = "https://pixabay.com/api/";
+// const API_KEY = "55978698-0d602613e63391cce9d7defd1";
+// let currentPage = 1;
+// const limit = 12;
+// let search = "";
+// let largeImage = null;
+// let instance = null;
+
+// const inputRef = document.querySelector(".input");
+// const listRef = document.querySelector(".list");
+// const element = document.querySelector(".element");
+
+// inputRef.addEventListener("input",debounce((e)=>{
+//     listRef.innerHTML="";
+//     search=""
+//     search = e.target.value.trim();
+//     getImages().then(res=>createImages(res.hits));
+// },500))
+// function getImages() {
+//     return fetch(`${URL}?key=${API_KEY}&q=${search}&image_type=photo&page=${currentPage}&per_page=${limit}&orientation=horizontal`).then(res=>res.json());
+// }
+
+// function createImages(array) {
+//     const image = array.map(({previewURL,largeImageURL,tags})=>{
+//         return `<li class="item" data-action="${largeImageURL}">
+//    <img src="${previewURL}" alt="${tags}" class="image">
+//  </li>`
+//     }).join("");
+//     listRef.insertAdjacentHTML("beforeend",image);
+// }
+
+// listRef.addEventListener("click",(e)=>{
+//     if (e.target.nodeName !== "IMG") {
+//         return;
+//     }
+    
+//     largeImage = e.target.closest("li").dataset.action;
+
+//     instance = basicLightbox.create(`
+//     <div class="modal">
+//         <img src="${largeImage}" alt="photo" class="image">
+//     </div>
+// `);
+
+// instance.show()
+// })
+
+
+// window.addEventListener("keydown",(e)=>{
+//     if (e.code==="Escape") {
+//         instance.close()
+//     }
+// })
+
+// const observer = new IntersectionObserver(([entries]) =>{
+//     if (entries.isIntersecting  && inputRef.value !== "") {
+//         currentPage += 1
+//         getImages().then(res=>createImages(res.hits));
+//     }
+// },{
+//     rootMargin: "50px",
+// })
+
+// observer.observe(element)
